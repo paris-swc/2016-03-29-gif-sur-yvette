@@ -2,7 +2,7 @@
 layout: workshop
 root: .
 venue: UNIC Gif-sur-Yvette      # brief name of host site without address (e.g., "Euphoric State University")
-address: 1 avenue de la Terrasse 91198 Gif-sur-Yvette, France    # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
+address: 1 avenue de la Terrasse, 91198 Gif-sur-Yvette, France    # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
 country: fr    # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: en   # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: 48.705573,2.127672 # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
@@ -12,7 +12,7 @@ startdate: 2016-03-29  # use YYYY-MM-DD format like "2015-01-01"
 enddate: 2016-03-30    # use YYYY-MM-DD format like" 2015-01-02"
 instructor: ["Camille Marini", "Jan Antolik", "Loïc Estève", "Maja Teleńczuk"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["Andrew Davison", "Bartosz Teleńczuk", "Marcel Stimberg", "Samuel Lelièvre"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-contact: FIXME    # contact email address for workshop organizer, such as "grace@hopper.org"
+contact: loic.esteve@inria.fr    # contact email address for workshop organizer, such as "grace@hopper.org"
 etherpad:         # optional (insert the URL for your Etherpad if you're using one)
 eventbrite:       # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB")
 ---
@@ -97,11 +97,15 @@ Registration is free but due to limited space it is mandatory. More information 
 {% if page.latlng %}
 <p id="where">
   <strong>Where:</strong>
-  {{page.address}}.
-  Get directions with
+  {{page.address}}. (Get directions with
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
   or
-  <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
+  <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>)<br>
+  <em>Access by RER :</em>
+From Paris, take the RER B direction "Saint Remy lès Chevreuse", to the station Gif-sur-Yvette <a href="https://www.unic.cnrs-gif.fr/site_media/images/access/rer.pdf">[Map of the RER network]</a>. Take the "Rue Alphonse Pécard" leaving the station fore-court in the direction of the centre of the village. Turn left in front of church along the "Rue Neuve". Take the first street on the right (Avenue de la Terrasse) which brings you to the CNRS campus gateway. The workshop takes place in building building 32/33 <a href="https://www.unic.cnrs-gif.fr/site_media/images/access/campus_gif.pdf">[Map of the CNRS campus]</a>.
+
+<em>Access by car :</em>
+You can reach Gif by motorway CHARTRES-ORLEANS (F18 or N118), by main road N306, or the motorway A6 then A87. <a href="https://www.unic.cnrs-gif.fr/site_media/images/access/road_map.gif">[Click here to view the road from Paris]</a>
 </p>
 {% endif %}
 
@@ -127,13 +131,14 @@ Registration is free but due to limited space it is mandatory. More information 
 -->
 <p id="contact">
   <strong>Contact</strong>:
-  Please mail
+  Please mail Loïc Estève (
   {% if page.contact %}
     <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
   {% else %}
     <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
   {% endif %}
-  for more information.
+  )
+  for any questions.
 </p>
 
 <hr/>
